@@ -1,0 +1,70 @@
+@font-face {
+    font-family: "arcane" ;
+    src: url(Arcane\ Nine.otf);
+}
+*{
+    font-family: "arcane";
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1{
+    text-align: center;
+    font-size: 4rem;
+    margin-top: 20px;
+    background: -webkit-linear-gradient(rgb(252, 70, 100), #2200ff );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 90vh;
+}
+.container{
+    display: flex;
+    width: 90vw;
+}
+.panel{
+    display: flex;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 70vh;
+    border-radius: 30px;
+    color: white;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    transition: flex 0.7s ease-in;
+}
+.panel h3{
+    font-size: 24px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    opacity: 0;
+    padding-left: 20px;
+
+}
+.panel.active{
+    flex: 5;
+}
+.panel.active h3{
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+
+}
+@media (max-width: 480px){
+    .container{
+        width: 100vw;
+    }
+    .panel:nth-of-type(4),.panel:nth-of-type(5){
+        display: none;
+    }
+    
+}
